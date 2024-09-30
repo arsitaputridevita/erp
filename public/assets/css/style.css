@@ -1449,3 +1449,138 @@ h6 {
   color: #fff;
   background: linear-gradient(45deg, rgb(242, 157, 0) 19%, rgba(19, 91, 113, 1) 79%);
 }
+.icon {
+  font-size: 12px;
+  /* Ukuran ikon */
+  color: #ffff;
+  /* Warna ikon */
+  text-decoration: none;
+  /* Menghilangkan garis bawah */
+  transition: color 0.3s, border-color 0.3s;
+  /* Efek transisi saat hover */
+  border: 3px solid transparent;
+  /* Border awal transparan */
+  border-radius: 6px;
+  /* Membuat sudut border bulat */
+  padding: 5px;
+  /* Memberikan jarak antara ikon dan border */
+  background-color: #204A5A;
+  /* Warna latar belakang ikon */
+}
+
+.icon:hover {
+  color: lightgreen;
+  /* Warna ikon saat hover */
+  border-color: lightgreen;
+  /* Warna border saat hover */
+  transform: scale(1.2);
+  /* Membesarkan ikon saat hover */
+}
+
+
+.container {
+  background-color: white;
+  /* Warna latar belakang kartu */
+  border-radius: 8px;
+  /* Membuat sudut kartu melengkung */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Bayangan untuk kedalaman */
+  overflow: hidden;
+  /* Menghilangkan elemen yang meluap dari kartu */
+  width: 150%;
+  /* Lebar kartu */
+  height: 50%;
+  margin: 20px;
+  /* Margin di sekitar kartu */
+  transition: transform 0.3s;
+  /* Transisi untuk efek hover */
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  /* Jarak antar tombol */
+  align-items: flex-start;
+  /* Agar switch rata di kiri */
+}
+
+.button {
+  background: linear-gradient(45deg, rgba(12, 179, 169, 1) 22%, rgba(19, 91, 113, 1) 79%);
+  /* Warna latar belakang tombol */
+  color: white;
+  /* Warna teks tombol */
+  padding: 5px 5px;
+  /* Padding di dalam tombol */
+  border: none;
+  /* Menghilangkan border default */
+  border-radius: 5px;
+  /* Sudut melengkung untuk tombol */
+  text-decoration: none;
+  /* Menghilangkan garis bawah pada tautan */
+  transition: background-color 0.3s;
+  /* Transisi untuk efek hover tombol */
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Jarak antara switch dan teks */
+  width: auto;
+}
+
+.switch {
+  width: 50px;
+  height: 25px;
+  position: relative;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: lightgreen;
+}
+
+input:checked+.slider:before {
+  transform: translateX(24px);
+}
+
+.garis-lurus {
+  height: 2px;
+  /* Ketebalan garis */
+  background-color: rgba(12, 179, 169, 1);
+  /* Warna garis */
+  width: 100%;
+  /* Panjang garis */
+}
+
+.tr {
+  background-color: rgba(12, 179, 169, 1);
+}
